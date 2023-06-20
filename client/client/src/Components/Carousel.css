@@ -1,0 +1,121 @@
+.carousel {
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 400px;
+  position: relative;
+  margin-top: 70px;
+}
+
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+}
+
+.slide.inactive {
+  display: none;
+}
+
+.carousel-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-item img {
+  width: 550px;
+}
+
+.carousel-text {
+  padding: 0 1rem;
+  text-align: left;
+  max-width: 30%;
+}
+
+.image-description-container {
+  border-top: gray solid 1px;
+  padding: 10px 0px 10px 0px;
+}
+
+.last-container {
+  border-bottom: gray solid 1px;
+}
+
+.image-description {
+  padding: 2px;
+  color: white;
+  background-color: rgb(54, 53, 53);
+}
+
+.image-text {
+  margin-left: 10px;
+}
+
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  overflow-x: scroll;
+}
+
+.thumbnails-border {
+  padding: 40px;
+  border: 1px solid gray;
+}
+
+.thumbnails::-webkit-scrollbar {
+  display: none;
+}
+
+.thumbnails img {
+  margin: 0 5px;
+  cursor: pointer;
+  flex-shrink: 0;
+  height: 80px;
+  width: 120px;
+  object-fit: cover;
+}
+
+.thumbnails img.active {
+  padding: 5px;
+  border: 2px solid maroon;
+}
+
+.thumbnails img.inactive {
+  opacity: 0.5;
+}
+
+.thumbnails img.active {
+  transform: translateX(calc(50% - 60px));
+}
+
+.hide {
+  display: none;
+}
+
+.next,
+.prev {
+  position: relative;
+  bottom: 30px
+}
+
+.next:hover,
+.prev:hover {
+  cursor: pointer;
+}
+
+.disable {
+  opacity: .2;
+}
